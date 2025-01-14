@@ -49,9 +49,19 @@
 {% endschema %}
 
 {% stylesheet %}
-  .container {
-     padding: 20px 0 10px;
-     max-width: 800px;
-     margin: 0 auto;
+    .container {
+      padding: 20px 0 10px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
   }
 {% endstylesheet %}
+
+<div class="container">
+  <h1 class="title">{{ section.settings.section_title }}</h1>
+  <div class="content"></div>
+</div>
