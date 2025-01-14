@@ -8,7 +8,42 @@
       "id": "section_title",
       "label": "Section Title",
       "default": "FAQs on Design & Developer"
-    }]
-
+    }],
+   "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Your question here"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "Your answer here"
+        }
+      ]
+    }
+  ],
+   "presets": [
+    {
+      "name": "FAQs Section presets",
+      "blocks": [{
+        "type": "faq_item"
+      }, {
+        "type": "faq_item"
+      }, {
+        "type": "faq_item"
+      }, {
+        "type": "faq_item"
+      }, {
+        "type": "faq_item"
+      }]
+    }
+  ]
 }
 {% endschema %}
