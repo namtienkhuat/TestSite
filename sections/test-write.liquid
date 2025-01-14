@@ -1,19 +1,52 @@
-<p>{{ section.settings.test_write }}</p>
 {% schema %}
 {
-  "name": "Test write",
-  "settings": [{
-    "type": "text",
-    "id": "test_write",
-    "label": "Enter Your Title",
-    "default": "Test Write Section Title"
-  }],
-  "tag": "section",
-  "blocks": [],
-  "presets": [
-    {
-      "name": "Test Write Section"
-    }
-  ]
+        "name": "FAQs",
+        "tag": "section",
+        "class": "section",
+        "disabled_on": {
+                "groups": ["header", "footer"]
+        },
+        "settings": [
+                {
+                        "type": "text",
+                        "id": "caption",
+                        "label": "Caption",
+                },
+                {
+                        "type": "inline_richtext",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Test write content config"
+                },
+                {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "hxl",
+          "label": "Extra large"
+        },
+        {
+          "value": "hxxl",
+          "label": "Extra extra large"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+
+                ]
 }
 {% endschema %}
