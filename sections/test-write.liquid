@@ -1,4 +1,7 @@
-<div class="container">
+<div
+  class="container"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
   {% if section.settings.heading %}
     <{{ section.settings.heading_size }} class="title">
       {{- section.settings.heading -}}
@@ -12,14 +15,16 @@
           <h2 class="question-content">{{ block.settings.row_question }}</h2>
           <i class="fa-solid fa-plus icon"></i>
         </div>
-        <div class="answer">
+        <div
+          class="answer"
+          style="display: {% if forloop.first and section.settings.open_first_question %}block{% else %}none{% endif %};"
+        >
           <h2 class="answer-active">{{ block.settings.row_answer }}</h2>
         </div>
       </div>
     {% endfor %}
   </div>
 </div>
-
 {% stylesheet %}
   * {
     box-sizing: border-box;
