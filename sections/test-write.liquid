@@ -1,3 +1,26 @@
+<div class="container">
+  <h1 class="title">{{ section.settings.section_title }}</h1>
+  <div class="content">
+    {% for block in section.blocks %}
+      <div class="faq-item">
+        <div class="question">
+          <h2 class="question-content">{{ block.settings.question }}</h2>
+          <i class="fa-solid fa-plus icon"></i>
+        </div>
+        <div class="answer" style="display: none;">
+          <h2 class="answer-active">{{ block.settings.answer }}</h2>
+          <div class="answer-list">
+            <span>- Mattis nunc sed blandit libero volutpat.</span><br>
+            <span>- Tortor at risus viverra adipiscing at in tellus.</span><br>
+            <span>- Purus ut faucibus pulvinar elementum.</span><br>
+            <span>- Blandit turpis cursus in hac habitasse.</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
 {
         "name": "FAQs",
