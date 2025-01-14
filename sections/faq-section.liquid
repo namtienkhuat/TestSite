@@ -27,7 +27,13 @@
           "id": "answer",
           "label": "Answer",
           "default": "Your answer here"
-        }
+        },
+        {
+  "type": "collection_list",
+  "id": "answer_list",
+  "label": "Answer List",
+  "info": "List of additional answers."
+}
       ]
     }
   ],
@@ -73,6 +79,11 @@
           style="display: {% if forloop.first and section.settings.open_first_question %}block{% else %}none{% endif %};"
         >
           <h2 class="answer-active">{{ block.settings.answer }}</h2>
+          <div class="answer-list">
+            {% for item in block.settings.answer_list %}
+              <span>- {{ item }}</span><br>
+            {% endfor %}
+          </div>
         </div>
       </div>
     {% endfor %}
