@@ -208,41 +208,5 @@
 {% endstylesheet %}
 
 {% javascript %}
-  const questions = document.querySelectorAll(".question");
-
-  questions.forEach((question) => {
-      question.addEventListener("click", () => {
-          // Lấy phần tử câu trả lời gần kề
-          const answer = question.nextElementSibling;
-
-          // Lấy icon liên quan đến câu hỏi này
-          const icon = question.querySelector("i.fa-solid.icon");
-
-          // Đóng tất cả các câu hỏi khác
-          questions.forEach((q) => {
-              const otherAnswer = q.nextElementSibling;
-              const otherIcon = q.querySelector("i.fa-solid.icon");
-
-              if (otherAnswer.style.display === "block" && q !== question) {
-                  otherAnswer.style.display = "none";
-                  q.style.removeProperty("background-color");
-                  q.style.removeProperty("color");
-                  otherIcon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
-              }
-          });
-
-          // Toggle hiển thị hoặc ẩn cho câu hỏi hiện tại
-          if (answer.style.display === "none" || !answer.style.display) {
-              answer.style.display = "block";
-              question.style.backgroundColor = "#118B50";
-              question.style.color = "#f4f4f4";
-              icon.className = "fa-solid fa-minus icon"; // Đổi icon thành dấu trừ
-          } else {
-              answer.style.display = "none";
-              question.style.removeProperty("background-color");
-              question.style.removeProperty("color");
-              icon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
-          }
-      });
-  });
+  alert("heyyy")
 {% endjavascript %}
