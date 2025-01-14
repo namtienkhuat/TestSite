@@ -1,7 +1,15 @@
+<p>{{ section.settings.test_write }}</p>
 {% schema %}
 {
   "name": "Test write",
-  "settings": [],
+  "settings": [{
+    "type": "text",
+    "id": "test_write",
+    "label": "Enter Your Title",
+    "default": "Test Write Section Title"
+  }],
+  "tag": "section",
+  "blocks": [],
   "presets": [
     {
       "name": "Test Write Section"
