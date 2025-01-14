@@ -156,20 +156,20 @@
 
 {% schema %}
 {
-        "name": "FAQs",
-        "tag": "section",
-        "class": "section",
-        "disabled_on": {
-                "groups": ["header", "footer"]
-        },
-        "settings": [
-                {
-                        "type": "inline_richtext",
-                        "id": "heading",
-                        "label": "Heading",
-                        "default": "Test write content config"
-                },
-                {
+  "name": "FAQs",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Test write content config"
+    },
+    {
       "type": "select",
       "id": "heading_size",
       "options": [
@@ -197,12 +197,13 @@
       "default": "h1",
       "label": "Medium"
     },
-     {
+    {
       "type": "checkbox",
       "id": "open_first_question",
       "default": false,
       "label": "Open first question"
-    }, {
+    },
+    {
       "type": "range",
       "id": "padding_top",
       "min": 0,
@@ -222,33 +223,32 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
-
-                ],
- "blocks": [
-  {
-    "type": "question_row",
-    "name": "Question Row",
-    "settings": [
-      {
-        "type": "text",
-        "id": "row_question",
-        "label": "Question",
-        "default": "Enter your question",
-        "info": "Provide the question that will trigger the collapsible content."
-      },
-      {
-        "type": "textarea",
-        "id": "row_answer",
-        "label": "Answer",
-        "info": "Provide the answer that will be displayed when the question is clicked."
-      }
-    ]
-  }
-],
-   "presets": [
+  ],
+  "blocks": [
+    {
+      "type": "question_row",
+      "name": "Question Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "row_question",
+          "label": "Question",
+          "default": "Enter your question",
+          "info": "Provide the question that will trigger the collapsible content."
+        },
+        {
+          "type": "textarea",
+          "id": "row_answer",
+          "label": "Answer",
+          "info": "Provide the answer that will be displayed when the question is clicked."
+        }
+      ]
+    }
+  ],
+  "presets": [
     {
       "name": "FAQs Test Write",
-       "blocks": [
+      "blocks": [
         {
           "type": "question_row"
         },
