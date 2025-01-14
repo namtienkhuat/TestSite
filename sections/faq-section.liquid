@@ -1,4 +1,4 @@
-{{ 'all.min.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'all.min.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 {% schema %}
 {
@@ -63,8 +63,8 @@
   </div>
 </div>
 
-<style>
-    * {
+{% stylesheet %}
+  * {
     box-sizing: border-box;
   }
 
@@ -191,11 +191,9 @@
       column-gap: 10px;
     }
   }
+{% endstylesheet %}
 
-  /*# sourceMappingURL=index.css.map */
-</style>
-
-<script>
+{% javascript %}
   const questions = document.querySelectorAll(".question");
 
   questions.forEach((question) => {
@@ -233,4 +231,4 @@
           }
       });
   });
-</script>
+{% endjavascript %}
