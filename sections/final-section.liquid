@@ -1,94 +1,14 @@
-<p>{{ 'text' | t }}</p>
-
-{% for block in section.blocks %}
-  {% if block.type == 'paragraph' %}
-    <p>{{ block.settings.text }}</p>
-  {% elsif block.type == '@app' %}
-    {% render block %}
-  {% endif %}
-{% endfor %}
-
-<h1 style="color: {{ section.settings.color }}">{{ section.settings.text }}</h1>
-
-{% for block in section.blocks %}
-  {% if block.type == 'social' %}
-    <a href="{{ block.settings.url }}">{{ block.settings.text }}</a>
-  {% endif %}
-{% endfor %}
-
-{% stylesheet %}
-  .custom-section {
-    background: gray;
-    padding: 60px 0;
-  }
-{% endstylesheet %}
-
 {% schema %}
 {
-  "name": "Custom section",
-  "settings": [
-    {
+  "name": "FAQs",
+  "tag": "div",
+  "class": "container",
+  "settings": [ {
       "type": "text",
-      "id": "text",
-      "label": "Text"
-    },
-    {
-      "type": "color",
-      "id": "color",
-      "label": "Text color",
-      "default": "#000000"
-    }
-  ],
-  "tag": "header",
-  "class": "custom-section",
-  "limit": 1,
-  "blocks": [
-    {
-      "type": "@app"
-    },
-    {
-      "name": "Social link",
-      "type": "social",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text"
-        },
-        {
-          "type": "url",
-          "id": "url",
-          "label": "URL"
-        }
-      ]
-    },
-    {
-      "name": "Paragraph",
-      "type": "paragraph",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "text",
-          "label": "Text"
-        }
-      ]
-    }
-  ],
-  "max_blocks": 3,
-  "locales": {
-    "en": {
-      "text": "Hello"
-    },
-    "es": {
-      "text": "Hola"
-    }
-  },
-  "default": {
-    "settings": {
-      "text": "Coding with Robby"
-    }
-  }
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "FAQs on Design & Developer"
+    }]
+
 }
 {% endschema %}
-
-Beta 0 / 0 used queries 1
