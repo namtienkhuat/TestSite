@@ -74,21 +74,26 @@
 
                 ],
  "blocks": [
-    {
-      "type": "collapsible_row",
-      "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default",
-          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label",
-          "info": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.info"
-        }, {
-          "type": "richtext",
-          "id": "row_content",
-          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.row_content.label"
-        },]}],
+  {
+    "type": "collapsible_row",
+    "name": "Collapsible Row",
+    "settings": [
+      {
+        "type": "text",
+        "id": "row_question",
+        "label": "Question",
+        "default": "Enter your question",
+        "info": "Provide the question that will trigger the collapsible content."
+      },
+      {
+        "type": "textarea",
+        "id": "row_answer",
+        "label": "Answer",
+        "info": "Provide the answer that will be displayed when the question is clicked."
+      }
+    ]
+  }
+],
    "presets": [
     {
       "name": "FAQs Test Write",
