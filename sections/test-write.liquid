@@ -3,6 +3,9 @@
         "name": "FAQs",
         "tag": "section",
         "class": "section",
+        "disabled_on": {
+                "groups": ["header", "footer"]
+        },
         "settings": [
                 {
                         "type": "text",
@@ -70,6 +73,22 @@
     }
 
                 ],
+ "blocks": [
+    {
+      "type": "collapsible_row",
+      "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label",
+          "info": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.info"
+        }, {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.row_content.label"
+        },]}],
    "presets": [
     {
       "name": "FAQs Test Write",
