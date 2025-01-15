@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="cta">
-    <h3 class="cta__title poppins-medium">{{ section.settings.heading }}</h3>
+    <h3 class="cta__title poppins-medium" style="text-align: {{ section.settings.heading_alignment }}; font-size: {{ section.settings.heading_size }}; padding-top: {{ section.settings.padding_top }}; padding-bottom: {{ section.settings.padding_bottom }}>{{ section.settings.heading }}</h3>
     <div class="cta__actions">
       <button class="cta__button cta__button--decline">{{ section.settings.button_noThanks }}</button>
       <button class="cta__button cta__button--accept">{{ section.settings.button_showMore }}</button>
