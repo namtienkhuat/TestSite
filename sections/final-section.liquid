@@ -104,7 +104,9 @@
     {% endfor %}
   </div>
 </div>
-<script>
+{% javascript %}
+  
+
 document.addEventListener("DOMContentLoaded", function () {
     const questions = document.querySelectorAll(".question");
     const openFirstQuestion = "{{ section.settings.open_first_question }}" === "true"; // Lấy giá trị từ Liquid
@@ -152,4 +154,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-</script>
+{% endjavascript %}
