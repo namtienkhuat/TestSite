@@ -59,7 +59,7 @@
       ],
       "settings": {
         "heading": "FAQs on Design & Development",
-        "heading_size": "xxl",
+        "heading_size": "xs",
         "heading_alignment": "center",
         "open_first_collapsible_row": true,
         "padding_top": 36,
