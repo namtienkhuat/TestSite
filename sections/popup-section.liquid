@@ -20,7 +20,8 @@
     <div class="popup__login-container">
       <img
         class="popup__login-image"
-        src="{{ 'intro.jpg' | asset_url }}"
+        <!-- src="{{ 'intro.jpg' | asset_url }}" -->
+         src="{{ section.settings.image }}"
         alt="Introduction"
         width="385"
         height="577.5"
@@ -257,7 +258,7 @@
     {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          "label": "Image banner",
         },
   ],
   "blocks": [],
