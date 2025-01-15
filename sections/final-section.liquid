@@ -325,6 +325,7 @@
 
           // Lấy icon liên quan đến câu hỏi này
           const icon = question.querySelector("i.fa-solid.icon");
+          const questionContent = question.querySelector(".question-content")
 
           // Đóng tất cả các câu hỏi khác
           questions.forEach((q) => {
@@ -344,6 +345,7 @@
               answer.style.display = "block";
               question.style.backgroundColor = "#118B50";
               question.style.color = "#f4f4f4";
+              questionContent.style.color = "white"
               icon.className = "fa-solid fa-minus icon"; // Đổi icon thành dấu trừ
           } else {
               answer.style.display = "none";
