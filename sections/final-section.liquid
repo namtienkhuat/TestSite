@@ -89,9 +89,6 @@
     padding: 20px;
     font-size: 20px;
   }
-  .answer {
-  font-size: 16px;
-  }
   .question {
     display: flex;
     justify-content: space-between;
@@ -120,10 +117,12 @@
 
   .answer {
     max-width: 800px;
-    display: none;
+    overflow: hidden;
+    max-height: 0px;
     background-color: #e3f0af;
+     font-size: 16px;
+    transition: max-height 0.5s ease;
   }
-
   @media (max-width: 375px) {
     .question-content {
       width: 200px;
@@ -282,13 +281,10 @@
 {% endschema %}
 
 <script>
-    const questions = document.querySelectorAll(".question");
-    questions.forEach((question) => {
+     const questions = document.querySelectorAll(".question");
+  questions.forEach((question) => {
       question.addEventListener("click", () => {
-          // Lấy phần tử câu trả lời gần kề
           const answer = question.nextElementSibling;
-
-          // Lấy icon liên quan đến câu hỏi này
           const icon = question.querySelector("i.fa-solid.icon");
 
           // Đóng tất cả các câu hỏi khác
@@ -296,8 +292,8 @@
               const otherAnswer = q.nextElementSibling;
               const otherIcon = q.querySelector("i.fa-solid.icon");
 
-              if (otherAnswer.style.display === "block" && q !== question) {
-                  otherAnswer.style.display = "none";
+              if (otherAnswer.style.maxHeight && q !== question) {
+                  otherAnswer.style.maxHeight = null; // Ẩn câu trả lời
                   q.style.removeProperty("background-color");
                   q.style.removeProperty("color");
                   otherIcon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
@@ -305,13 +301,13 @@
           });
 
           // Toggle hiển thị hoặc ẩn cho câu hỏi hiện tại
-          if (answer.style.display === "none" || !answer.style.display) {
-              answer.style.display = "block";
+          if (!answer.style.maxHeight) {
+              answer.style.maxHeight = answer.scrollHeight + "px"; // Đặt chiều cao tối đa bằng chiều cao nội dung
               question.style.backgroundColor = "#118B50";
               question.style.color = "#f4f4f4";
               icon.className = "fa-solid fa-minus icon"; // Đổi icon thành dấu trừ
           } else {
-              answer.style.display = "none";
+              answer.style.maxHeight = null; // Ẩn câu trả lời
               question.style.removeProperty("background-color");
               question.style.removeProperty("color");
               icon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
