@@ -4,7 +4,7 @@
 <div class="container poppins-regular">
   <div class="cta">
     <h3 class="cta__title poppins-medium" style="text-align: {{ section.settings.heading_alignment }}; font-size: {{ section.settings.heading_size }}; padding-top: {{ section.settings.padding_top }}; padding-bottom: {{ section.settings.padding_bottom }}>{{ section.settings.heading }}</h3>
-    <div class="cta__actions">
+    <div>
       <button class="cta__button cta__button--decline">{{ section.settings.button_noThanks }}</button>
       <button class="cta__button cta__button--accept">{{ section.settings.button_showMore }}</button>
     </div>
@@ -18,7 +18,7 @@
   </div>
   <div class="popup popup__login">
     <div class="popup__login-container">
-      {{ section.settings.image_login }}1
+      {{ section.settings.image_login }}
       <img
         class="popup__login-image"
         src="{{ section.settings.image_login | default: 'intro.jpg' | asset_url }}"
