@@ -100,6 +100,7 @@
     justify-content: space-between;
      transition: background-color 0.3s ease, color 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
     align-items: center;
+    color: black;
   }
   .question:hover {
     background-color: #5db996;
@@ -317,15 +318,11 @@
 {% endschema %}
 
 <script>
-    const questions = document.querySelectorAll(".question");
-    questions.forEach((question) => {
+     const questions = document.querySelectorAll(".question");
+  questions.forEach((question) => {
       question.addEventListener("click", () => {
-          // Lấy phần tử câu trả lời gần kề
           const answer = question.nextElementSibling;
-
-          // Lấy icon liên quan đến câu hỏi này
           const icon = question.querySelector("i.fa-solid.icon");
-          const questionContent = question.querySelector(".question-content")
 
           // Đóng tất cả các câu hỏi khác
           questions.forEach((q) => {
@@ -334,9 +331,7 @@
 
               if (otherAnswer.style.display === "block" && q !== question) {
                   otherAnswer.style.display = "none";
-                  q.style.removeProperty("background-color");
-                  q.style.removeProperty("color");
-
+                  q.classList.remove("active"); // Xóa lớp active khỏi câu hỏi khác
                   otherIcon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
               }
           });
@@ -344,13 +339,11 @@
           // Toggle hiển thị hoặc ẩn cho câu hỏi hiện tại
           if (answer.style.display === "none" || !answer.style.display) {
               answer.style.display = "block";
-              question.style.backgroundColor = "#118B50";
-              question.style.color = "#f4f4f4";
+              question.classList.add("active"); // Thêm lớp active cho câu hỏi hiện tại
               icon.className = "fa-solid fa-minus icon"; // Đổi icon thành dấu trừ
           } else {
               answer.style.display = "none";
-              question.style.removeProperty("background-color");
-              question.style.removeProperty("color");
+              question.classList.remove("active"); // Xóa lớp active khi ẩn
               icon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
           }
       });
