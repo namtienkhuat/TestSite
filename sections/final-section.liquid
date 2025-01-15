@@ -336,7 +336,6 @@
                   otherAnswer.style.display = "none";
                   q.style.removeProperty("background-color");
                   q.style.removeProperty("color");
-              questionContent.style.color = "black";
 
                   otherIcon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
               }
@@ -347,13 +346,11 @@
               answer.style.display = "block";
               question.style.backgroundColor = "#118B50";
               question.style.color = "#f4f4f4";
-              questionContent.style.color = "white"
               icon.className = "fa-solid fa-minus icon"; // Đổi icon thành dấu trừ
           } else {
               answer.style.display = "none";
               question.style.removeProperty("background-color");
               question.style.removeProperty("color");
-              questionContent.style.color = "black";
               icon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
           }
       });
