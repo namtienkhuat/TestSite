@@ -19,216 +19,56 @@
         "text_line": "Đây là dòng text mặc định"
       }
     },
-    "faq_section_JgXFPR": {
-      "type": "faq-section",
-      "blocks": {
-        "faq_item_6E7xGP": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here",
-            "answer_list": []
-          }
-        },
-        "faq_item_yKXVEB": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here",
-            "answer_list": []
-          }
-        },
-        "faq_item_pm8EpU": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here",
-            "answer_list": []
-          }
-        },
-        "faq_item_c7qwTV": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here",
-            "answer_list": []
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_6E7xGP",
-        "faq_item_yKXVEB",
-        "faq_item_pm8EpU",
-        "faq_item_c7qwTV"
-      ],
-      "settings": {
-        "section_title": "FAQs on Design & Developer"
-      }
-    },
-    "test_write_Q4KmVj": {
-      "type": "test-write",
-      "blocks": {
-        "question_row_VzGQeD": {
-          "type": "question_row",
-          "settings": {
-            "row_question": "Enter your question",
-            "row_answer": ""
-          }
-        },
-        "question_row_8TLfjm": {
-          "type": "question_row",
-          "settings": {
-            "row_question": "Enter your question",
-            "row_answer": ""
-          }
-        },
-        "question_row_DRwVcY": {
-          "type": "question_row",
-          "settings": {
-            "row_question": "Enter your question",
-            "row_answer": ""
-          }
-        },
-        "question_row_HAiMVP": {
-          "type": "question_row",
-          "settings": {
-            "row_question": "Enter your question",
-            "row_answer": ""
-          }
-        }
-      },
-      "block_order": [
-        "question_row_VzGQeD",
-        "question_row_8TLfjm",
-        "question_row_DRwVcY",
-        "question_row_HAiMVP"
-      ],
-      "settings": {
-        "heading": "Test write content config",
-        "heading_size": "h1",
-        "open_first_question": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collapsible_content_kFEPPi": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_TzGfxb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>Row content</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_L4BYND": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_zjYNMW": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_8bYJ9w": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_TzGfxb",
-        "collapsible_row_L4BYND",
-        "collapsible_row_zjYNMW",
-        "collapsible_row_8bYJ9w"
-      ],
-      "custom_css": [],
-      "settings": {
-        "caption": "",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "final_section_DgKPwD": {
+    "final_section_ACXreD": {
       "type": "final-section",
       "blocks": {
-        "faq_item_6CjbWk": {
-          "type": "faq_item",
+        "question_row_YBNpax": {
+          "type": "question_row",
           "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
+            "heading": "Question Row",
+            "row_content": "<p>Answer Row</p>"
           }
         },
-        "faq_item_fcfFX7": {
-          "type": "faq_item",
+        "question_row_yCxPny": {
+          "type": "question_row",
           "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
+            "heading": "Question Row",
+            "row_content": ""
           }
         },
-        "faq_item_HzpdjX": {
-          "type": "faq_item",
+        "question_row_gdwmKy": {
+          "type": "question_row",
           "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
+            "heading": "Question Row",
+            "row_content": ""
           }
         },
-        "faq_item_DewTca": {
-          "type": "faq_item",
+        "question_row_EQqMUi": {
+          "type": "question_row",
           "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
-          }
-        },
-        "faq_item_4CdUm4": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
+            "heading": "Question Row",
+            "row_content": ""
           }
         }
       },
       "block_order": [
-        "faq_item_6CjbWk",
-        "faq_item_fcfFX7",
-        "faq_item_HzpdjX",
-        "faq_item_DewTca",
-        "faq_item_4CdUm4"
+        "question_row_YBNpax",
+        "question_row_yCxPny",
+        "question_row_gdwmKy",
+        "question_row_EQqMUi"
       ],
       "settings": {
-        "section_title": "FAQs on Design & Developer"
+        "heading": "FAQs on Design & Development",
+        "heading_size": "xxl",
+        "heading_alignment": "center",
+        "open_first_collapsible_row": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "test_site_NxwC6Y",
-    "faq_section_JgXFPR",
-    "test_write_Q4KmVj",
-    "collapsible_content_kFEPPi",
-    "final_section_DgKPwD"
+    "final_section_ACXreD"
   ]
 }
