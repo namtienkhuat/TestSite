@@ -90,33 +90,59 @@
   </div>
 </div>
 
+<div class="container">
+  <h1 class="title">{{ section.settings.section_title }}</h1>
+  <div class="content">
+    {% for block in section.blocks %}
+      <div class="faq-item">
+        <div class="question">
+          <h2 class="question-content">{{ block.settings.question }}</h2>
+          <i class="fa-solid fa-plus icon"></i>
+        </div>
+        <div
+          class="answer"
+          style="display: {% if forloop.first and section.settings.open_first_question %}block{% else %}none{% endif %};"
+        >
+          <h2 class="answer-active">{{ block.settings.answer }}</h2>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% javascript %}
-  const questions = document.querySelectorAll(".question");
-  questions.forEach((question) => {
-      question.addEventListener("click", () => {
-          const answer = question.nextElementSibling;
-          const icon = question.querySelector("i.fa-solid.icon");
-          questions.forEach((q) => {
-              const otherAnswer = q.nextElementSibling;
-              const otherIcon = q.querySelector("i.fa-solid.icon");
-              if (otherAnswer.style.display === "block" && q !== question) {
-                  otherAnswer.style.display = "none";
-                  q.style.removeProperty("background-color");
-                  q.style.removeProperty("color");
-                  otherIcon.className = "fa-solid fa-plus icon";
+  document.addEventListener("DOMContentLoaded", function() {
+      const questions = document.querySelectorAll(".question");
+      questions.forEach((question) => {
+          question.addEventListener("click", () => {
+              const answer = question.nextElementSibling;
+              const icon = question.querySelector("i.fa-solid.icon");
+
+              // Đóng tất cả câu trả lời khác
+              questions.forEach((q) => {
+                  const otherAnswer = q.nextElementSibling;
+                  const otherIcon = q.querySelector("i.fa-solid.icon");
+                  if (otherAnswer.style.display === "block" && q !== question) {
+                      otherAnswer.style.display = "none";
+                      q.style.removeProperty("background-color");
+                      q.style.removeProperty("color");
+                      otherIcon.className = "fa-solid fa-plus icon";
+                  }
+              });
+
+              // Mở hoặc đóng câu trả lời hiện tại
+              if (answer.style.display === "none" || !answer.style.display) {
+                  answer.style.display = "block";
+                  question.style.backgroundColor = "#118B50";
+                  question.style.color = "#f4f4f4";
+                  icon.className = "fa-solid fa-minus icon";
+              } else {
+                  answer.style.display = "none";
+                  question.style.removeProperty("background-color");
+                  question.style.removeProperty("color");
+                  icon.className = "fa-solid fa-plus icon";
               }
           });
-          if (answer.style.display === "none" || !answer.style.display) {
-              answer.style.display = "block";
-              question.style.backgroundColor = "#118B50";
-              question.style.color = "#f4f4f4";
-              icon.className = "fa-solid fa-minus icon";
-          } else {
-              answer.style.display = "none";
-              question.style.removeProperty("background-color");
-              question.style.removeProperty("color");
-              icon.className = "fa-solid fa-plus icon";
-          }
       });
   });
 {% endjavascript %}
