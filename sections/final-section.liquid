@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{{ 'faq-section.css' | asset_url }}">
 
 <div
   class="container"
@@ -30,123 +31,7 @@
   </div>
 </div>
 
-<style>
-    p, h1, h2, h3, h4, h5, h6 {
-  margin: 0px;}
-      * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Lato", sans-serif;
-      width: 100%;
-      height: 100vh;
-      margin: 0 auto;
-      background-color: #fbf6e9;
-    }
-
-    .container {
-      padding: 20px 0 10px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 40px;
-      font-weight: 400;
-    }
-    @media (max-width: 990px) {
-      .title {
-        font-size: 30px;
-      }
-    }
-    @media (max-width: 768px) {
-      .title {
-        font-size: 20px;
-      }
-    }
-    .section {
-      height: 100vh;
-    }
-    .content {
-      width: 100%;
-      margin: 20px auto 0;
-    }
-    @media (max-width: 990px) {
-      .content {
-        padding: 0 10px;
-      }
-    }
-
-    .first-question,
-    .faq-item {
-      border: 1px solid gray;
-      background-color: #f4f4f4;
-      border-bottom: none;
-    }
-
-    .faq-item:last-child {
-      border-bottom: 1px solid gray;
-    }
-
-    .question, .answer {
-      padding: 20px;
-      font-size: 20px;
-    }
-    .answer {
-    font-size: 16px;
-    }
-    .question {
-      display: flex;
-      justify-content: space-between;
-       transition: background-color 0.3s ease, color 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
-      align-items: center;
-      color: black;
-    }
-    .question:hover {
-      background-color: #5db996;
-      color: #f4f4f4;
-    }
-    .question-content {
-      margin: 0px;
-    }
-
-    .icon {
-      font-size: 20px;
-    }
-    .icon:hover {
-      cursor: pointer;
-    }
-    @media (max-width: 375px) {
-      .icon {
-        display: none;
-      }
-    }
-
-    .answer {
-      max-width: 800px;
-      display: none;
-      background-color: #e3f0af;
-    }
-
-    @media (max-width: 375px) {
-      .question-content {
-        width: 200px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .question {
-        column-gap: 10px;
-      }
-    }
-
-    /*# sourceMappingURL=index.css.map */
-</style>
+<script src="{{ 'faq-section.js' | asset_url }}"></script>
 
 {% schema %}
 {
@@ -161,56 +46,30 @@
       "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "FAQs on Design & Development",
+      "default": "FAQs on Design & Development"
     },
     {
       "type": "select",
       "id": "heading_size",
-      "label": "Heading",
-     "options": [
-    {
-      "value": "22px",
-      "label": "X-small"
+      "label": "Heading Size",
+      "options": [
+        {"value": "22px", "label": "X-small"},
+        {"value": "24px", "label": "Small"},
+        {"value": "26px", "label": "Medium"},
+        {"value": "30px", "label": "Large"},
+        {"value": "34px", "label": "X-large"},
+        {"value": "42px", "label": "XX-large"}
+      ],
+      "default": "42px"
     },
-    {
-      "value": "24px",
-      "label": "Small"
-    },
-    {
-      "value": "26px",
-      "label": "Medium"
-    },
-    {
-      "value": "30px",
-      "label": "Large"
-    },
-    {
-      "value": "34px",
-      "label": "X-large"
-    },
-    {
-      "value": "42px",
-      "label": "XX-large"
-    }
-  ],
-  "default": "42px"},
     {
       "type": "select",
       "id": "heading_alignment",
-      "label": "Heading alignment",
+      "label": "Heading Alignment",
       "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
+        {"value": "left", "label": "Left"},
+        {"value": "center", "label": "Center"},
+        {"value": "right", "label": "Right"}
       ],
       "default": "center"
     },
@@ -218,11 +77,11 @@
       "type": "checkbox",
       "id": "open_first_collapsible_row",
       "default": true,
-      "label": "Open first question row"
+      "label": "Open First Question Row"
     },
     {
       "type": "header",
-      "content": "Section padding"
+      "content": "Section Padding"
     },
     {
       "type": "range",
@@ -231,7 +90,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
+      "label": "Top Padding",
       "default": 36
     },
     {
@@ -241,12 +100,12 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
+      "label": "Bottom Padding",
       "default": 36
     }
-    ],
-    "blocks": [
-      {
+  ],
+  "blocks": [
+    {
       "type": "question_row",
       "name": "Question Row",
       "settings": [
@@ -254,107 +113,40 @@
           "type": "text",
           "id": "heading",
           "default": "Question Row",
-          "label": "Enter your question",
-          "info": "Include a heading that explains the content"
+          "label": "Enter Your Question"
         },
-         {
-      "type": "select",
-      "id": "question_size",
-      "label": "Question Size",
-     "options": [
-    {
-      "value": "12px",
-      "label": "X-small"
-    },
-    {
-      "value": "14px",
-      "label": "Small"
-    },
-    {
-      "value": "16px",
-      "label": "Medium"
-    },
-    {
-      "value": "20px",
-      "label": "Large"
-    },
-    {
-      "value": "24px",
-      "label": "X-large"
-    },
-    {
-      "value": "32px",
-      "label": "XX-large"
-    }
-  ],
-  "default": "24px"},
+        {
+          "type": "select",
+          "id": "question_size",
+          "label": "Question Size",
+          "options": [
+            {"value": "12px", "label": "X-small"},
+            {"value": "14px", "label": "Small"},
+            {"value": "16px", "label": "Medium"},
+            {"value": "20px", "label": "Large"},
+            {"value": "24px", "label": "X-large"},
+            {"value": "32px", "label": "XX-large"}
+          ],
+          "default": "24px"
+        },
         {
           "type": "richtext",
           "id": "row_content",
-          "label": "Enter your answer"
+          "label": "Enter Your Answer"
         }
-
-      ]}
-    ],
-    "presets": [
+      ]
+    }
+  ],
+  "presets": [
     {
       "name": "Final Section Demo",
       "blocks": [
-        {
-          "type": "question_row"
-        },
-        {
-          "type": "question_row"
-        },
-        {
-          "type": "question_row"
-        },
-        {
-          "type": "question_row"
-        }
+        {"type": "question_row"},
+        {"type": "question_row"},
+        {"type": "question_row"},
+        {"type": "question_row"}
       ]
     }
   ]
 }
 {% endschema %}
-
-<script>
-    const questions = document.querySelectorAll(".question");
-    questions.forEach((question) => {
-      question.addEventListener("click", () => {
-          // Lấy phần tử câu trả lời gần kề
-          const answer = question.nextElementSibling;
-
-          // Lấy icon liên quan đến câu hỏi này
-          const icon = question.querySelector("i.fa-solid.icon");
-          const questionContent = question.querySelector(".question-content")
-
-          // Đóng tất cả các câu hỏi khác
-          questions.forEach((q) => {
-              const otherAnswer = q.nextElementSibling;
-              const otherIcon = q.querySelector("i.fa-solid.icon");
-
-              if (otherAnswer.style.display === "block" && q !== question) {
-                  otherAnswer.style.display = "none";
-                  q.style.removeProperty("background-color");
-                  q.style.removeProperty("color");
-
-                  otherIcon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
-              }
-          });
-
-          // Toggle hiển thị hoặc ẩn cho câu hỏi hiện tại
-          if (answer.style.display === "none" || !answer.style.display) {
-              answer.style.display = "block";
-              question.style.backgroundColor = "#118B50";
-              question.style.color = "#f4f4f4";
-              icon.className = "fa-solid fa-minus icon"; // Đổi icon thành dấu trừ
-          } else {
-              answer.style.display = "none";
-              question.style.removeProperty("background-color");
-              question.style.removeProperty("color");
-              icon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
-          }
-      });
-  });
-</script>
