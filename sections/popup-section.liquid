@@ -1,0 +1,314 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{{ 'popup-section.css' | asset_url }}">
+
+<div class="container poppins-regular">
+  <div class="cta">
+    <h3
+      class="cta__title poppins-medium"
+      style="text-align: {{ section.settings.heading_alignment }}; font-size: {{ section.settings.heading_size }}; padding-top: {{ section.settings.padding_top }}; padding-bottom: {{ section.settings.padding_bottom }}"
+    >
+      {{ section.settings.heading }}
+    </h3>
+    <div class="cta__actions">
+      <button class="cta__button cta__button--decline">{{ section.settings.button_noThanks }}</button>
+      <button class="cta__button cta__button--accept">{{ section.settings.button_showMore }}</button>
+    </div>
+  </div>
+  <div class="popup__rejected">
+    <h3 class="popup__rejected-title">
+      Thanks for your choose! <br>
+      Good luck!
+    </h3>
+    <button class="popup__rejected-button">Accept</button>
+  </div>
+  <div class="popup popup__login">
+    <div class="popup__login-container">
+      {% if section.settings.image_login != blank %}
+        {{
+          section.settings.image_login
+          | image_url: width: 1500
+          | image_tag: alt: 'My favicon', srcset: null, class: 'popup__login-image'
+        }}
+      {% else -%}
+        <img
+          class="popup__login-image"
+          src="{{ section.settings.image_login | default: "intro.jpg" | asset_url }}"
+          alt="Introduction"
+          width="385"
+          height="577.5"
+        >
+      {% endif -%}
+      <div class="popup__login-content">
+        <div>
+          <div class="popup__login-close">
+            <i
+              class="popup__icon fa-solid fa-xmark fa-lg"
+            ></i>
+          </div>
+          <h3 class="popup__login-title poppins-bold">
+            {{ section.settings.heading_login }}
+          </h3>
+        </div>
+        <form id="form__login" class="popup__login-form">
+          <div class="popup__login-text">
+            <label for="email"><b>Enter Your Email</b></label>
+            <input
+              id="email__login"
+              class="popup__login-input popup__input--email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            >
+            <label for="password"><b>Enter Your Password</b></label>
+            <input
+              id="password__login"
+              class="popup__login-input login__input--password form-control"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            >
+            <input
+              class="popup__login-input login__input--submit"
+              type="submit"
+              value="Submit"
+            >
+          </div>
+        </form>
+
+        <div class="popup__login-footer">
+          <div class="popup__login-active">
+            <h3 class="popup__login-navi">You don't have an account.</h3>
+          </div>
+          <div class="login__form-actions">
+            <div
+              class="login__button login__button--submit"
+            >
+              No thanks
+            </div>
+            <div
+              class="login__button login__button--decline"
+            >
+              Register
+            </div>
+          </div>
+          <div class="popup__login-policy">
+            <h3 class="popup__copyright">© 2024</h3>
+            <a
+              class="popup__link"
+              href="https://www.wgentech.com/"
+              >Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup__register">
+    <div class="popup__register-container">
+      <img
+        class="popup__register-image"
+        src="{{ section.settings.image_register | default: 'register.jpg' | image_url }}"
+        alt="Introduction"
+        width="385"
+        height="577.5"
+      >
+      {% if section.settings.image_login != blank %}
+        {{
+          section.settings.image_login
+          | image_url: width: 1500
+          | image_tag: alt: 'My favicon', srcset: null, class: 'popup__register-image'
+        }}
+      {% else -%}
+        <img
+          class="popup__register-image"
+          src="{{ section.settings.image_login | default: "register.jpg" | asset_url }}"
+          alt="Introduction"
+          width="385"
+          height="577.5"
+        >
+      {% endif -%}
+      <div class="popup__register-content">
+        <div>
+          <div class="popup__register-close">
+            <i
+              class="popup__icon fa-solid fa-xmark fa-lg"
+            ></i>
+          </div>
+          <h3 class="popup__register-title poppins-bold">
+            {{ section.settings.heading_register }}
+          </h3>
+        </div>
+        <form id="form__register" class="popup__register-form">
+          <div class="popup__register-text">
+            <label for="email"><b>Enter Your Email</b></label>
+            <input
+              id="email__register"
+              class="popup__register-input popup__input--email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            >
+            <label for="password"><b>Enter Your Password</b></label>
+            <input
+              id="password__register"
+              class="popup__register-input register__input--password form-control"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            >
+            <input
+              class="popup__register-input register__input--submit"
+              type="submit"
+              value="Submit"
+            >
+          </div>
+        </form>
+
+        <div class="popup__register-footer">
+          <div class="popup__register-active">
+            <h3 class="popup__register-navi">You do have an account.</h3>
+          </div>
+          <div class="register__form-actions">
+            <div
+              class="register__button register__button--submit"
+            >
+              No thanks
+            </div>
+            <div
+              class="register__button register__button--decline"
+            >
+              Login
+            </div>
+          </div>
+          <div class="popup__register-policy">
+            <h3 class="popup__copyright">© 2024</h3>
+            <a
+              class="popup__link"
+              href="https://www.wgentech.com/"
+              >Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer src="{{ 'popup-login.js' | asset_url }}"></script>
+<script defer src="{{ 'popup-rejected.js' | asset_url }}"></script>
+<script defer src="{{ 'popup-register.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Popup Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Do you want follow me?"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading Size",
+        "options": [
+        {"value": "22px", "label": "X-small"},
+        {"value": "24px", "label": "Small"},
+        {"value": "26px", "label": "Medium"},
+        {"value": "30px", "label": "Large"},
+        {"value": "34px", "label": "X-large"},
+        {"value": "42px", "label": "XX-large"}
+      ],
+      "default": "42px"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {"value": "left", "label": "Left"},
+        {"value": "center", "label": "Center"},
+        {"value": "right", "label": "Right"}
+      ],
+      "default": "center"
+    },
+     {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    },
+     {
+          "type": "text",
+          "id": "button_noThanks",
+          "default": "No thanks",
+          "label": "No thanks button",
+          "info": "Leave the label blank to hide the button."
+        },
+     {
+          "type": "text",
+          "id": "button_showMore",
+          "default": "Show more",
+          "label": "Show more button",
+          "info": "Leave the label blank to hide the button."
+        },
+    {
+          "type": "image_picker",
+          "id": "image_login",
+          "label": "Image login"
+        },
+     {
+      "type": "inline_richtext",
+      "id": "heading_login",
+      "label": "Heading login",
+      "default": "Stay Updated."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_register",
+      "label": "Image Register",
+    },
+      {
+      "type": "inline_richtext",
+      "id": "heading_register",
+      "label": "Heading Register",
+      "default": "Register Your Account"
+    },
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Popup Section Demo",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
