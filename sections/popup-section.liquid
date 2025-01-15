@@ -1,6 +1,9 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{{ 'popup-section.css' | asset_url }}">
+
 <div class="container">
   <div class="cta">
-    <h3 class="cta__title poppins-medium">Do you want follow me?</h3>
+    <h3 class="cta__title poppins-medium">{{ section.settings.heading }}</h3>
     <div class="cta__actions">
       <button class="cta__button cta__button--decline">No thanks</button>
       <button class="cta__button cta__button--accept">Show more</button>
@@ -169,9 +172,86 @@
   </div>
 </div>
 
+<script defer src="{{ 'popup-section.js' | asset_url }}"></script>
+
 {% schema %}
 {
-  "name": "Section name",
-  "settings": []
+  "name": "Popup Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Do you want follow me?"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading Size",
+        "options": [
+        {"value": "22px", "label": "X-small"},
+        {"value": "24px", "label": "Small"},
+        {"value": "26px", "label": "Medium"},
+        {"value": "30px", "label": "Large"},
+        {"value": "34px", "label": "X-large"},
+        {"value": "42px", "label": "XX-large"}
+      ],
+      "default": "42px"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {"value": "left", "label": "Left"},
+        {"value": "center", "label": "Center"},
+        {"value": "right", "label": "Right"}
+      ],
+      "default": "center"
+    },
+     {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    },
+     {
+          "type": "text",
+          "id": "button_noThanks",
+          "default": "No thanks",
+          "label": "No thanks button",
+          "info": "Leave the label blank to hide the button."
+        },
+     {
+          "type": "text",
+          "id": "button_showMore",
+          "default": "Show more",
+          "label": "Show more button",
+          "info": "Leave the label blank to hide the button."
+        },
+  ]
 }
 {% endschema %}
