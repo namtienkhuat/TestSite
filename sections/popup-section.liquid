@@ -3,8 +3,13 @@
 
 <div class="container poppins-regular">
   <div class="cta">
-    <h3 class="cta__title poppins-medium" style="text-align: {{ section.settings.heading_alignment }}; font-size: {{ section.settings.heading_size }}; padding-top: {{ section.settings.padding_top }}; padding-bottom: {{ section.settings.padding_bottom }}>{{ section.settings.heading }}</h3>
-    <div>
+    <h3
+      class="cta__title poppins-medium"
+      style="text-align: {{ section.settings.heading_alignment }}; font-size: {{ section.settings.heading_size }}; padding-top: {{ section.settings.padding_top }}; padding-bottom: {{ section.settings.padding_bottom }}"
+    >
+      {{ section.settings.heading }}
+    </h3>
+    <div class="cta__actions">
       <button class="cta__button cta__button--decline">{{ section.settings.button_noThanks }}</button>
       <button class="cta__button cta__button--accept">{{ section.settings.button_showMore }}</button>
     </div>
@@ -34,7 +39,7 @@
             ></i>
           </div>
           <h3 class="popup__login-title poppins-bold">
-          {{ section.settings.heading_login }}
+            {{ section.settings.heading_login }}
           </h3>
         </div>
         <form id="form__login" class="popup__login-form">
@@ -97,7 +102,7 @@
     <div class="popup__register-container">
       <img
         class="popup__register-image"
-                  src="{{ section.settings.image_register | default: 'register.jpg' | image_url }}"
+        src="{{ section.settings.image_register | default: 'register.jpg' | image_url }}"
         alt="Introduction"
         width="385"
         height="577.5"
@@ -110,7 +115,7 @@
             ></i>
           </div>
           <h3 class="popup__register-title poppins-bold">
-           {{ section.settings.heading_register }}
+            {{ section.settings.heading_register }}
           </h3>
         </div>
         <form id="form__register" class="popup__register-form">
