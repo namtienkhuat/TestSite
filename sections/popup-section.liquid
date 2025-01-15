@@ -18,6 +18,7 @@
   </div>
   <div class="popup popup__login">
     <div class="popup__login-container">
+      {{ section.seetings.image_login }}
       <img
         class="popup__login-image"
         src="{{ section.settings.image_login | default: 'intro.jpg' | asset_url }}"
