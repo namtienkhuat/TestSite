@@ -27,7 +27,7 @@
           "settings": {
             "heading": "1. How much dose a new website cost?",
             "question_size": "24px",
-            "row_content": "<h5>Intern velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibhh nisl condimentum.</h5><h5>-Mattis nunc sed blandit libero volutpat.</h5><h5>-Tortor at risus viverra adipiscing at in tellus.</h5><h5>-Purus ut faucibus pulvinar elementum.</h5><h5>-Blandit turpis cursus in hac habitasse               </h5>"
+            "row_content": "<h4>Intern velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibhh nisl condimentum.</h4><h4>-Mattis nunc sed blandit libero volutpat.</h4><h4>-Tortor at risus viverra adipiscing at in tellus.</h4><h4>-Purus ut faucibus pulvinar elementum.</h4><h4>-Blandit turpis cursus in hac habitasse               </h4>"
           }
         },
         "question_row_yCxPny": {
@@ -35,7 +35,7 @@
           "settings": {
             "heading": "2. Do you only create WordPress website?",
             "question_size": "24px",
-            "row_content": "<p>No, I can assist with a variety of website platforms, including but not limited to:<br/><br/>- WordPress<br/>- Shopify<br/>- Wix<br/>- Squarespace<br/>- Joomla<br/>- Drupal<br/><br/>If you have a specific platform or project in mind, feel free to ask for more details or assistance!</p>"
+            "row_content": "<h4>No, I can assist with a variety of website platforms, including but not limited to:<br/><br/>- WordPress<br/>- Shopify<br/>- Wix<br/>- Squarespace<br/>- Joomla<br/>- Drupal<br/><br/>If you have a specific platform or project in mind, feel free to ask for more details or assistance!</h4>"
           }
         },
         "question_row_gdwmKy": {
@@ -43,7 +43,7 @@
           "settings": {
             "heading": "3. Will you maintain my site for me?",
             "question_size": "24px",
-            "row_content": "<p>I can provide guidance and advice on maintaining your site, such as best practices for updates, backups, and security. However, I can't perform ongoing maintenance tasks directly. If you need regular maintenance, consider hiring a web developer or a maintenance service that specializes in your platform. If you have specific questions about maintenance tasks, feel free to ask!</p>"
+            "row_content": "<h4>I can provide guidance and advice on maintaining your site, such as best practices for updates, backups, and security. However, I can't perform ongoing maintenance tasks directly. If you need regular maintenance, consider hiring a web developer or a maintenance service that specializes in your platform. If you have specific questions about maintenance tasks, feel free to ask!</h4>"
           }
         },
         "question_row_EQqMUi": {
@@ -51,7 +51,7 @@
           "settings": {
             "heading": "4. Will my website be mobile-friendly?",
             "question_size": "24px",
-            "row_content": "<p>Yes, I can help ensure your website is mobile-friendly by using responsive design, flexible images, and user-friendly navigation. Regular testing on various devices is also essential. If you need specific assistance, just let me know!</p>"
+            "row_content": "<h4>Yes, I can help ensure your website is mobile-friendly by using responsive design, flexible images, and user-friendly navigation. Regular testing on various devices is also essential. If you need specific assistance, just let me know!</h4>"
           }
         }
       },
