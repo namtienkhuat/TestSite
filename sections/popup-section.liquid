@@ -23,6 +23,7 @@
   </div>
   <div class="popup popup__login">
     <div class="popup__login-container">
+      1111- {{ section.settings.image_login }}
       {% if section.settings.image_login != blank %}
         {{ section.settings.image_login | image_url: width: 1500 }}
       {% else -%}
