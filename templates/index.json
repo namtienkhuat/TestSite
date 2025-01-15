@@ -26,6 +26,7 @@
           "type": "question_row",
           "settings": {
             "heading": "1. How much dose a new website cost?",
+            "question_size": "24px",
             "row_content": "<p>Intern velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibhh nisl condimentum.</p><p>-Mattis nunc sed blandit libero volutpat.</p><p>-Tortor at risus viverra adipiscing at in tellus.</p><p>-Purus ut faucibus pulvinar elementum.</p><p>-Blandit turpis cursus in hac habitasse               </p>"
           }
         },
@@ -33,6 +34,7 @@
           "type": "question_row",
           "settings": {
             "heading": "2. Do you only create WordPress website?",
+            "question_size": "24px",
             "row_content": "<p>No, I can assist with a variety of website platforms, including but not limited to:<br/><br/>- WordPress<br/>- Shopify<br/>- Wix<br/>- Squarespace<br/>- Joomla<br/>- Drupal<br/><br/>If you have a specific platform or project in mind, feel free to ask for more details or assistance!</p>"
           }
         },
@@ -40,6 +42,7 @@
           "type": "question_row",
           "settings": {
             "heading": "3. Will you maintain my site for me?",
+            "question_size": "24px",
             "row_content": "<p>I can provide guidance and advice on maintaining your site, such as best practices for updates, backups, and security. However, I can't perform ongoing maintenance tasks directly. If you need regular maintenance, consider hiring a web developer or a maintenance service that specializes in your platform. If you have specific questions about maintenance tasks, feel free to ask!</p>"
           }
         },
@@ -47,6 +50,7 @@
           "type": "question_row",
           "settings": {
             "heading": "4. Will my website be mobile-friendly?",
+            "question_size": "24px",
             "row_content": "<p>Yes, I can help ensure your website is mobile-friendly by using responsive design, flexible images, and user-friendly navigation. Regular testing on various devices is also essential. If you need specific assistance, just let me know!</p>"
           }
         }
@@ -59,7 +63,7 @@
       ],
       "settings": {
         "heading": "<strong>FAQs on Design & Development</strong>",
-        "heading_size": "32px",
+        "heading_size": "42px",
         "heading_alignment": "center",
         "open_first_collapsible_row": false,
         "padding_top": 36,
