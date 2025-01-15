@@ -1,4 +1,5 @@
 {{ 'all.min.css' | asset_url | stylesheet_tag }}
+
 {% schema %}
 {
   "name": "FAQs",
@@ -49,7 +50,7 @@
 }
 {% endschema %}
 
-{% stylesheet %}
+<style>
     .container {
       padding: 20px 0 10px;
       max-width: 800px;
@@ -84,7 +85,7 @@
   .icon:hover {
     cursor: pointer;
   }
-{% endstylesheet %}
+</style>
 
 <div class="container">
   <h1 class="title">{{ section.settings.section_title }}</h1>
@@ -106,7 +107,7 @@
   </div>
 </div>
 
-{% javascript %}
+<script>
   document.addEventListener("DOMContentLoaded", function() {
       const questions = document.querySelectorAll(".question");
       questions.forEach((question) => {
@@ -142,4 +143,4 @@
           });
       });
   });
-{% endjavascript %}
+</script>
