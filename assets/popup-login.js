@@ -10,6 +10,7 @@ const formLoginElement = document.getElementById("form__login");
 
 showMoreButtonLogin.addEventListener("click", () => {
     const cookie = document.cookie;
+  console.log('111111', cookie)
     if (cookie) {
         const arr = cookie.split("=");
         const newDate = new Date(arr[1]);
