@@ -1,4 +1,4 @@
-const finalHandleLogin = () => {
+var finalHandleLogin = () => {
   const ctaLogin = document.querySelector(".cta");
 const popupLoginLogin = document.querySelector(".popup__login");
 const popupRegisterLogin = document.querySelector(".popup__register");
