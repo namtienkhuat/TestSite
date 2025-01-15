@@ -25,7 +25,11 @@
     <div class="popup__login-container">
       1111- {{ section.settings.image_login }}
       {% if section.settings.image_login != blank %}
-        {{ section.settings.image_login | image_url: width: 1500 }}
+        {{
+          section.settings.image_login
+          | image_url: width: 1500
+          | image_tag: alt: 'My favicon', srcset: null, class: 'css-class-1 css-class-2'
+        }}
       {% else -%}
         <img
           class="popup__login-image"
