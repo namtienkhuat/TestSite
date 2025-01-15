@@ -32,22 +32,22 @@
         "question_row_yCxPny": {
           "type": "question_row",
           "settings": {
-            "heading": "Question Row",
-            "row_content": ""
+            "heading": " 2. Do you only create WordPress website?",
+            "row_content": "<p>No, I can assist with a variety of website platforms, including but not limited to:<br/><br/>- WordPress<br/>- Shopify<br/>- Wix<br/>- Squarespace<br/>- Joomla<br/>- Drupal<br/><br/>If you have a specific platform or project in mind, feel free to ask for more details or assistance!</p>"
           }
         },
         "question_row_gdwmKy": {
           "type": "question_row",
           "settings": {
-            "heading": "Question Row",
-            "row_content": ""
+            "heading": "3. Will you maintain my site for me?",
+            "row_content": "<p>I can provide guidance and advice on maintaining your site, such as best practices for updates, backups, and security. However, I can't perform ongoing maintenance tasks directly. If you need regular maintenance, consider hiring a web developer or a maintenance service that specializes in your platform. If you have specific questions about maintenance tasks, feel free to ask!</p>"
           }
         },
         "question_row_EQqMUi": {
           "type": "question_row",
           "settings": {
-            "heading": "Question Row",
-            "row_content": ""
+            "heading": " 4. Will my website be mobile-friendly?",
+            "row_content": "<p>Yes, I can help ensure your website is mobile-friendly by using responsive design, flexible images, and user-friendly navigation. Regular testing on various devices is also essential. If you need specific assistance, just let me know!</p>"
           }
         }
       },
