@@ -145,11 +145,78 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "popup_section_zdCLqR": {
+      "type": "popup-section",
+      "settings": {
+        "heading": "Do you want follow me?",
+        "heading_size": "42px",
+        "heading_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "button_noThanks": "No thanks",
+        "button_showMore": "Show more"
+      }
+    },
+    "multicolumn_CMp7tM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hAUAka": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bC4Yt9": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YWBUbC": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_hAUAka",
+        "column_bC4Yt9",
+        "column_YWBUbC"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "faq_section_VkaNCH",
     "newsletter_fRN8fN",
-    "slideshow_WmJGtg"
+    "slideshow_WmJGtg",
+    "popup_section_zdCLqR",
+    "multicolumn_CMp7tM"
   ]
 }
