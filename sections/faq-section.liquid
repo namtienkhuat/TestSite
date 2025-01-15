@@ -1,0 +1,152 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{{ 'faq-section.css' | asset_url }}">
+
+<div
+  class="container"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px"
+>
+  <h1
+    class="title"
+    style="text-align: {{ section.settings.heading_alignment }}; font-size: {{ section.settings.heading_size }}"
+  >
+    {{ section.settings.heading }}
+  </h1>
+  <div class="content">
+    {% for block in section.blocks %}
+      <div class="faq-item">
+        <div class="question">
+          <h2 class="question-content" style="font-size: {{ block.settings.question_size }}">
+            {{ block.settings.heading }}
+          </h2>
+          <i class="fa-solid fa-plus icon"></i>
+        </div>
+        <div
+          class="answer"
+          style="display: {% if forloop.first and section.settings.open_first_question %}block{% else %}none{% endif %};"
+        >
+          <h2 class="answer-active">{{ block.settings.row_content }}</h2>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script defer src="{{ 'faq-section.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Final Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "FAQs on Design & Development"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading Size",
+      "options": [
+        {"value": "22px", "label": "X-small"},
+        {"value": "24px", "label": "Small"},
+        {"value": "26px", "label": "Medium"},
+        {"value": "30px", "label": "Large"},
+        {"value": "34px", "label": "X-large"},
+        {"value": "42px", "label": "XX-large"}
+      ],
+      "default": "42px"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {"value": "left", "label": "Left"},
+        {"value": "center", "label": "Center"},
+        {"value": "right", "label": "Right"}
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_collapsible_row",
+      "default": true,
+      "label": "Open First Question Row"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question_row",
+      "name": "Question Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Question Row",
+          "label": "Enter Your Question"
+        },
+        {
+          "type": "select",
+          "id": "question_size",
+          "label": "Question Size",
+          "options": [
+            {"value": "12px", "label": "X-small"},
+            {"value": "14px", "label": "Small"},
+            {"value": "16px", "label": "Medium"},
+            {"value": "20px", "label": "Large"},
+            {"value": "24px", "label": "X-large"},
+            {"value": "32px", "label": "XX-large"}
+          ],
+          "default": "24px"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "Enter Your Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Final Section Demo",
+      "blocks": [
+        {"type": "question_row"},
+        {"type": "question_row"},
+        {"type": "question_row"},
+        {"type": "question_row"}
+      ]
+    }
+  ]
+}
+{% endschema %}
