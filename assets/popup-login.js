@@ -1,4 +1,5 @@
-const ctaLogin = document.querySelector(".cta");
+const finalHandleLogin = () => {
+  const ctaLogin = document.querySelector(".cta");
 const popupLoginLogin = document.querySelector(".popup__login");
 const popupRegisterLogin = document.querySelector(".popup__register");
 const popupContainerLogin = document.querySelector(".popup__login-container");
@@ -85,3 +86,6 @@ window.addEventListener("click", (e) => {
         closePopupLoginLogin();
     }
 });
+}
+
+finalHandleLogin()
