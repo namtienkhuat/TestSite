@@ -292,7 +292,7 @@
               const otherAnswer = q.nextElementSibling;
               const otherIcon = q.querySelector("i.fa-solid.icon");
 
-              if (otherAnswer.style.maxHeight && q !== question) {
+              if (otherAnswer.style.maxHeight) {
                   otherAnswer.style.maxHeight = null; // Ẩn câu trả lời
                   q.style.removeProperty("background-color");
                   q.style.removeProperty("color");
