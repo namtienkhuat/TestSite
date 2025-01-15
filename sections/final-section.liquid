@@ -14,7 +14,9 @@
     {% for block in section.blocks %}
       <div class="faq-item">
         <div class="question">
-          <h2 class="question-content">{{ block.settings.heading }}</h2>
+          <h2 class="question-content" style="font-size: {{ section.blocks.setting.heading_size }}">
+            {{ block.settings.heading }}
+          </h2>
           <i class="fa-solid fa-plus icon"></i>
         </div>
         <div
@@ -252,6 +254,37 @@
           "label": "Enter your question",
           "info": "Include a heading that explains the content"
         },
+         {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading",
+     "options": [
+    {
+      "value": "12px",
+      "label": "X-small"
+    },
+    {
+      "value": "14px",
+      "label": "Small"
+    },
+    {
+      "value": "16px",
+      "label": "Medium"
+    },
+    {
+      "value": "20px",
+      "label": "Large"
+    },
+    {
+      "value": "24px",
+      "label": "X-large"
+    },
+    {
+      "value": "32px",
+      "label": "XX-large"
+    }
+  ],
+  "default": "16px"},
         {
           "type": "richtext",
           "id": "row_content",
