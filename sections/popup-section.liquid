@@ -23,7 +23,6 @@
   </div>
   <div class="popup popup__login">
     <div class="popup__login-container">
-      1111- {{ section.settings.image_login }}
       {% if section.settings.image_login != blank %}
         {{
           section.settings.image_login
@@ -115,6 +114,21 @@
         width="385"
         height="577.5"
       >
+      {% if section.settings.image_login != blank %}
+        {{
+          section.settings.image_login
+          | image_url: width: 1500
+          | image_tag: alt: 'My favicon', srcset: null, class: 'popup__register-image'
+        }}
+      {% else -%}
+        <img
+          class="popup__register-image"
+          src="{{ section.settings.image_login | default: "register.jpg" | asset_url }}"
+          alt="Introduction"
+          width="385"
+          height="577.5"
+        >
+      {% endif -%}
       <div class="popup__register-content">
         <div>
           <div class="popup__register-close">
