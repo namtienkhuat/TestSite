@@ -3191,7 +3191,7 @@
             }
         },
         "collapsible_content": {
-            "name": "Collapsible Test",
+            "name": "Collapsible content",
             "settings": {
                 "caption": {
                     "label": "Caption"
