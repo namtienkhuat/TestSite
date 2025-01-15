@@ -1,5 +1,25 @@
 {{ 'all.min.css' | asset_url | stylesheet_tag }}
 
+<div class="container">
+  <h1 class="title">{{ section.settings.heading }}</h1>
+  <div class="content">
+    {% for block in section.blocks %}
+      <div class="faq-item">
+        <div class="question">
+          <h2 class="question-content">{{ block.settings.heading }}</h2>
+          <i class="fa-solid fa-plus icon"></i>
+        </div>
+        <div
+          class="answer"
+          style="display: {% if forloop.first and section.settings.open_first_question %}block{% else %}none{% endif %};"
+        >
+          <h2 class="answer-active">{{ block.settings.row_content }}</h2>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "Final Section",
@@ -9,11 +29,6 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-    {
-      "type": "text",
-      "id": "caption",
-      "label": "Caption"
-    },
     {
       "type": "inline_richtext",
       "id": "heading",
