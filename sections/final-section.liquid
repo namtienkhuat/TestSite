@@ -31,124 +31,120 @@
 </div>
 
 <style>
-      * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Lato", sans-serif;
-      width: 100%;
-      height: 100vh;
-      margin: 0 auto;
-      background-color: #fbf6e9;
-    }
-
-    .container {
-      padding: 20px 0 10px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 40px;
-      font-weight: 400;
-    }
-    @media (max-width: 990px) {
-      .title {
-        font-size: 30px;
-      }
-    }
-    @media (max-width: 768px) {
-      .title {
-        font-size: 20px;
-      }
-    }
-    .section {
-      height: 100vh;
-    }
-    .content {
-      width: 100%;
-      margin: 20px auto 0;
-    }
-    @media (max-width: 990px) {
-      .content {
-        padding: 0 10px;
-      }
-    }
-
-    .first-question,
-    .faq-item {
-      border: 1px solid gray;
-      background-color: #f4f4f4;
-      border-bottom: none;
-    }
-
-    .faq-item:last-child {
-      border-bottom: 1px solid gray;
-    }
-
-    .question, .answer {
-      padding: 20px;
-      font-size: 20px;
-    }
-    .answer {
-    font-size: 16px;
-    }
-    .question {
-      display: flex;
-      justify-content: space-between;
-       transition: background-color 0.3s ease, color 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
-      align-items: center;
-      color: black;
-    }
-    .question:hover {
-      background-color: #5db996;
-      color: #f4f4f4;
-      color: white;
-    }
-    .question-content {
-      margin: 0px;
-    }
-
-    .icon {
-      font-size: 20px;
-    }
-    .icon:hover {
-      cursor: pointer;
-    }
-    @media (max-width: 375px) {
-      .icon {
-        display: none;
-      }
-    }
-
-    .answer {
-      max-width: 800px;
-      display: none;
-      background-color: #e3f0af;
-    }
-
-    @media (max-width: 375px) {
-      .question-content {
-        width: 200px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .question {
-        column-gap: 10px;
-      }
-    }
-    .question.active {
-      background-color: #118B50; /* Màu nền khi được chọn */
-      color: white; /* Màu chữ khi được chọn */
+    * {
+    box-sizing: border-box;
   }
 
-    /*# sourceMappingURL=index.css.map */
+  body {
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #fbf6e9;
+  }
+
+  .container {
+    padding: 20px 0 10px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+  }
+  @media (max-width: 990px) {
+    .title {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 768px) {
+    .title {
+      font-size: 20px;
+    }
+  }
+  .section {
+    height: 100vh;
+  }
+  .content {
+    width: 100%;
+    margin: 20px auto 0;
+  }
+  @media (max-width: 990px) {
+    .content {
+      padding: 0 10px;
+    }
+  }
+
+  .first-question,
+  .faq-item {
+    border: 1px solid gray;
+    background-color: #f4f4f4;
+    border-bottom: none;
+  }
+
+  .faq-item:last-child {
+    border-bottom: 1px solid gray;
+  }
+
+  .question, .answer {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .answer {
+  font-size: 16px;
+  }
+  .question {
+    display: flex;
+    justify-content: space-between;
+     transition: background-color 0.3s ease, color 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+    align-items: center;
+    color: black;
+  }
+  .question:hover {
+    background-color: #5db996;
+    color: #f4f4f4;
+    color: white;
+  }
+  .question-content {
+    margin: 0px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+  .icon:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 375px) {
+    .icon {
+      display: none;
+    }
+  }
+
+  .answer {
+    max-width: 800px;
+    display: none;
+    background-color: #e3f0af;
+  }
+
+  @media (max-width: 375px) {
+    .question-content {
+      width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .question {
+      column-gap: 10px;
+    }
+  }
+
+  /*# sourceMappingURL=index.css.map */
 </style>
 
 {% schema %}
@@ -322,11 +318,15 @@
 {% endschema %}
 
 <script>
-     const questions = document.querySelectorAll(".question");
-  questions.forEach((question) => {
+    const questions = document.querySelectorAll(".question");
+    questions.forEach((question) => {
       question.addEventListener("click", () => {
+          // Lấy phần tử câu trả lời gần kề
           const answer = question.nextElementSibling;
+
+          // Lấy icon liên quan đến câu hỏi này
           const icon = question.querySelector("i.fa-solid.icon");
+          const questionContent = question.querySelector(".question-content")
 
           // Đóng tất cả các câu hỏi khác
           questions.forEach((q) => {
@@ -335,7 +335,9 @@
 
               if (otherAnswer.style.display === "block" && q !== question) {
                   otherAnswer.style.display = "none";
-                  q.classList.remove("active"); // Xóa lớp active khỏi câu hỏi khác
+                  q.style.removeProperty("background-color");
+                  q.style.removeProperty("color");
+
                   otherIcon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
               }
           });
@@ -343,11 +345,13 @@
           // Toggle hiển thị hoặc ẩn cho câu hỏi hiện tại
           if (answer.style.display === "none" || !answer.style.display) {
               answer.style.display = "block";
-              question.classList.add("active"); // Thêm lớp active cho câu hỏi hiện tại
+              question.style.backgroundColor = "#118B50";
+              question.style.color = "#f4f4f4";
               icon.className = "fa-solid fa-minus icon"; // Đổi icon thành dấu trừ
           } else {
               answer.style.display = "none";
-              question.classList.remove("active"); // Xóa lớp active khi ẩn
+              question.style.removeProperty("background-color");
+              question.style.removeProperty("color");
               icon.className = "fa-solid fa-plus icon"; // Đổi icon thành dấu cộng
           }
       });
