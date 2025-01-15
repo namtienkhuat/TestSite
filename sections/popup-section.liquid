@@ -1,6 +1,173 @@
+<div class="container">
+  <div class="cta">
+    <h3 class="cta__title poppins-medium">Do you want follow me?</h3>
+    <div class="cta__actions">
+      <button class="cta__button cta__button--decline">No thanks</button>
+      <button class="cta__button cta__button--accept">Show more</button>
+    </div>
+  </div>
+  <div class="popup__rejected">
+    <h3 class="popup__rejected-title">
+      Thanks for your choose! <br>
+      Good luck!
+    </h3>
+    <button class="popup__rejected-button">Accept</button>
+  </div>
+  <div class="popup popup__login">
+    <div class="popup__login-container">
+      <img
+        class="popup__login-image"
+        src="./public/img/intro.jpg"
+        alt="Introduction"
+      >
+      <div class="popup__login-content">
+        <div>
+          <div class="popup__login-close">
+            <i
+              class="popup__icon fa-solid fa-xmark fa-lg"
+            ></i>
+          </div>
+          <h3 class="popup__login-title poppins-bold">
+            Stay<br>
+            updated.
+          </h3>
+        </div>
+        <form id="form__login" class="popup__login-form">
+          <div class="popup__login-text">
+            <label for="email"><b>Enter Your Email</b></label>
+            <input
+              id="email__login"
+              class="popup__login-input popup__input--email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            >
+            <label for="password"><b>Enter Your Password</b></label>
+            <input
+              id="password__login"
+              class="popup__login-input login__input--password form-control"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            >
+            <input
+              class="popup__login-input login__input--submit"
+              type="submit"
+              value="Submit"
+            >
+          </div>
+        </form>
+
+        <div class="popup__login-footer">
+          <div class="popup__login-active">
+            <h3 class="popup__login-navi">You don't have an account.</h3>
+          </div>
+          <div class="login__form-actions">
+            <div
+              class="login__button login__button--submit"
+            >
+              No thanks
+            </div>
+            <div
+              class="login__button login__button--decline"
+            >
+              Register
+            </div>
+          </div>
+          <div class="popup__login-policy">
+            <h3 class="popup__copyright">© 2024</h3>
+            <a
+              class="popup__link"
+              href="https://www.wgentech.com/"
+              >Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup__register">
+    <div class="popup__register-container">
+      <img
+        class="popup__register-image"
+        src="./public/img/register.jpg"
+        alt="Introduction"
+      >
+      <div class="popup__register-content">
+        <div>
+          <div class="popup__register-close">
+            <i
+              class="popup__icon fa-solid fa-xmark fa-lg"
+            ></i>
+          </div>
+          <h3 class="popup__register-title poppins-bold">
+            Register<br>
+            Your Account.
+          </h3>
+        </div>
+        <form id="form__register" class="popup__register-form">
+          <div class="popup__register-text">
+            <label for="email"><b>Enter Your Email</b></label>
+            <input
+              id="email__register"
+              class="popup__register-input popup__input--email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            >
+            <label for="password"><b>Enter Your Password</b></label>
+            <input
+              id="password__register"
+              class="popup__register-input register__input--password form-control"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            >
+            <input
+              class="popup__register-input register__input--submit"
+              type="submit"
+              value="Submit"
+            >
+          </div>
+        </form>
+
+        <div class="popup__register-footer">
+          <div class="popup__register-active">
+            <h3 class="popup__register-navi">You do have an account.</h3>
+          </div>
+          <div class="register__form-actions">
+            <div
+              class="register__button register__button--submit"
+            >
+              No thanks
+            </div>
+            <div
+              class="register__button register__button--decline"
+            >
+              Login
+            </div>
+          </div>
+          <div class="popup__register-policy">
+            <h3 class="popup__copyright">© 2024</h3>
+            <a
+              class="popup__link"
+              href="https://www.wgentech.com/"
+              >Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Section name",
+  "settings": []
+}
 {% endschema %}
