@@ -1,4 +1,5 @@
-const cta = document.querySelector(".cta");
+var finalHandleRejected = () => {
+  const cta = document.querySelector(".cta");
 const popupRejected = document.querySelector(".popup__rejected");
 const acceptButton = document.querySelector(".popup__rejected-button");
 const noThanksButton = document.querySelector(".cta__button--decline");
@@ -41,3 +42,7 @@ function closePopupRejected() {
 }
 
 acceptButton.addEventListener("click", closePopupRejected);
+
+}
+
+finalHandleRejected()
