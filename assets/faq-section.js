@@ -30,5 +30,5 @@ questions.forEach((question) => {
         }
     });
 });
-finalHandleFaq()
 }
+finalHandleFaq()
