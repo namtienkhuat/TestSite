@@ -1,5 +1,4 @@
 var finalHandleRejected = () => {
-
     const cta = document.querySelector(".cta");
     const popupRejected = document.querySelector(".popup__rejected");
     const acceptButton = document.querySelector(".popup__rejected-button");
@@ -20,7 +19,7 @@ var finalHandleRejected = () => {
                 return;
             }
             // new dateTime+10 > hien tai ==> k hien else hien
-
+        }
         cta.classList.add("hidden");
         setTimeout(() => {
             cta.style.display = "none";
