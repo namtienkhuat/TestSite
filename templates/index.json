@@ -67,7 +67,7 @@
         "heading_size": "42px",
         "heading_alignment": "center",
         "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_bottom": 0,
         "button_noThanks": "No thanks",
         "button_showMore": "Show more",
         "image_login": "shopify://shop_images/intro.jpg",
