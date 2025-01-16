@@ -46,6 +46,7 @@
         },
         "question_row_hixWxL": {
           "type": "question_row",
+          "disabled": true,
           "settings": {
             "heading": "5. How long does it take to build a website?",
             "question_size": "24px",
