@@ -1,4 +1,5 @@
-const questions = document.querySelectorAll(".question");
+var finalHandleFaq = () => {
+  const questions = document.querySelectorAll(".question");
 questions.forEach((question) => {
     question.addEventListener("click", () => {
         const answer = question.nextElementSibling;
@@ -29,3 +30,5 @@ questions.forEach((question) => {
         }
     });
 });
+}
+finalHandleFaq()

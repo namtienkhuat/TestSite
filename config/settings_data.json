@@ -138,6 +138,17 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "faq-section": {
+        "type": "faq-section",
+        "settings": {
+          "heading": "FAQs on Design & Developer",
+          "heading_size": "42px",
+          "heading_alignment": "center",
+          "open_first_collapsible_row": true,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
       }
     },
     "content_for_index": [],
