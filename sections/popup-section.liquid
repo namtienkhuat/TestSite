@@ -22,10 +22,11 @@
   </div>
   <div class="popup__rejected">
     <h3 class="popup__rejected-title">
-      Thanks for your choose! <br>
+      {{ section.settings.title_popup_rejected }}
+      <br>
       Good luck!
     </h3>
-    <button class="popup__rejected-button">Accept</button>
+    <button class="popup__rejected-button">{{ section.settings.button_accept }}</button>
   </div>
   <div class="popup popup__login">
     <div class="popup__login-container">
@@ -297,6 +298,10 @@
           "label": "Accept rejected button",
           "info": "Leave the label blank to hide the button."
         },
+     {
+      "type": "header",
+      "content": "Popup Login"
+    },
     {
           "type": "image_picker",
           "id": "image_login",
