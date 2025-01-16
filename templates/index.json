@@ -46,6 +46,7 @@
         },
         "question_row_hixWxL": {
           "type": "question_row",
+          "disabled": true,
           "settings": {
             "heading": "5. How long does it take to build a website?",
             "question_size": "24px",
@@ -81,7 +82,7 @@
         "button_showMore": "Show more",
         "title_popup_rejected": "Thanks for your choose!",
         "button_accept": "Accept",
-        "image_login": "shopify://shop_images/pexels-darshan394-1173777.jpg",
+        "image_login": "shopify://shop_images/intro.jpg",
         "heading_login": "Stay Updated.",
         "image_register": "shopify://shop_images/register.jpg",
         "heading_register": "Register Your Account"
