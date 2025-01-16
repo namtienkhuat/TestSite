@@ -15,33 +15,33 @@
         "question_row_zCy3Tj": {
           "type": "question_row",
           "settings": {
-            "heading": "Question Row",
+            "heading": "1. How much dose a new website cost?",
             "question_size": "24px",
-            "row_content": ""
+            "row_content": "<h4>Website costs vary widely:<br/>1. Basic Site: $500 - $2,500<br/>2. E-commerce: $2,000 - $10,000+<br/>3. Custom Development: $5,000 - $50,000+<br/>Additional costs for hosting and maintenance apply. Define your needs for a more accurate estimate!</h4>"
           }
         },
         "question_row_K88dge": {
           "type": "question_row",
           "settings": {
-            "heading": "Question Row",
+            "heading": "2. Do you only create WordPress website?",
             "question_size": "24px",
-            "row_content": ""
+            "row_content": "<h4>No, I can help with various platforms, including:<br/>1. WordPress<br/>2. Shopify<br/>3. Wix<br/>4. Squarespace<br/>5. Custom HTML/CSS<br/>If you have a specific platform in mind, let me know!</h4>"
           }
         },
         "question_row_Pb9QM3": {
           "type": "question_row",
           "settings": {
-            "heading": "Question Row",
+            "heading": "3. Will you maintain my site for me?",
             "question_size": "24px",
-            "row_content": ""
+            "row_content": "<h4>I can't maintain your site directly, but you can:<br/>1. Hire a Service: Consider a maintenance package from a web development service.<br/>2. DIY: Manage updates yourself with training.<br/>3. Freelancers: Hire freelancers for specific tasks.<br/>Let me know if you need more details!</h4>"
           }
         },
         "question_row_R9fPBp": {
           "type": "question_row",
           "settings": {
-            "heading": "Question Row",
+            "heading": "4. Will my website be mobile-friendly?",
             "question_size": "24px",
-            "row_content": ""
+            "row_content": "<h4>To ensure your website is mobile-friendly:<br/>1. Responsive Design: Use flexible layouts and CSS media queries.<br/>2. Viewport Meta Tag: Add.<br/>3. Touch-Friendly Navigation: Make buttons and links easy to tap.<br/>4. Optimize Loading Times: Compress images and scripts.<br/>5. Test on Devices: Use tools like Google Mobile-Friendly Test.<br/>These steps will help ensure a positive mobile user experience.</h4>"
           }
         }
       },
@@ -70,8 +70,11 @@
         "padding_bottom": 0,
         "button_noThanks": "No thanks",
         "button_showMore": "Show more",
+        "title_popup_rejected": "Thanks for your choose!",
+        "button_accept": "Accept",
         "image_login": "shopify://shop_images/intro.jpg",
         "heading_login": "Stay Updated.",
+        "image_register": "shopify://shop_images/register.jpg",
         "heading_register": "Register Your Account"
       }
     }
