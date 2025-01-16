@@ -151,7 +151,7 @@ a {
   grid-template-columns: repeat(2, 385px);
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+ margin: 100px 0px;
   gap: 10px;
   min-width: 800px;
 }
