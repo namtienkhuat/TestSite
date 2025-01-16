@@ -1,4 +1,5 @@
-const ctaRegister = document.querySelector(".cta");
+var finalHandleRegister = () => {
+  const ctaRegister = document.querySelector(".cta");
 const popupLoginRegister = document.querySelector(".popup__login");
 const popupRegisterRegister = document.querySelector(".popup__register");
 const popupContainerRegister = document.querySelector(".popup__register-container");
@@ -59,3 +60,6 @@ window.addEventListener("click", (e) => {
         closePopupRegister();
     }
 });
+
+}
+    finalHandleRegister()
