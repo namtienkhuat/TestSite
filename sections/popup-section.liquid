@@ -1,5 +1,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="{{ 'popup-section.css' | asset_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+>
 
 <div class="container poppins-regular">
   <div class="cta">
@@ -16,10 +22,11 @@
   </div>
   <div class="popup__rejected">
     <h3 class="popup__rejected-title">
-      Thanks for your choose! <br>
+      {{ section.settings.title_popup_rejected }}
+      <br>
       Good luck!
     </h3>
-    <button class="popup__rejected-button">Accept</button>
+    <button class="popup__rejected-button">{{ section.settings.button_accept }}</button>
   </div>
   <div class="popup popup__login">
     <div class="popup__login-container">
@@ -107,13 +114,6 @@
   </div>
   <div class="popup popup__register">
     <div class="popup__register-container">
-      <img
-        class="popup__register-image"
-        src="{{ section.settings.image_register | default: 'register.jpg' | image_url }}"
-        alt="Introduction"
-        width="385"
-        height="577.5"
-      >
       {% if section.settings.image_login != blank %}
         {{
           section.settings.image_login
@@ -280,6 +280,28 @@
           "label": "Show more button",
           "info": "Leave the label blank to hide the button."
         },
+     {
+      "type": "header",
+      "content": "Popup Rejected"
+    },
+    {
+          "type": "text",
+          "id": "title_popup_rejected",
+          "default": "Thanks for your choose!",
+          "label": "Content title popup rejected",
+          "info": "Leave the label blank to hide the button."
+        },
+     {
+          "type": "text",
+          "id": "button_accept",
+          "default": "Accept",
+          "label": "Accept rejected button",
+          "info": "Leave the label blank to hide the button."
+        },
+     {
+      "type": "header",
+      "content": "Popup Login"
+    },
     {
           "type": "image_picker",
           "id": "image_login",
@@ -290,6 +312,10 @@
       "id": "heading_login",
       "label": "Heading login",
       "default": "Stay Updated."
+    },
+     {
+      "type": "header",
+      "content": "Popup Register"
     },
     {
       "type": "image_picker",
