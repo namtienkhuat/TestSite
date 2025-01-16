@@ -310,7 +310,8 @@ a {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: fit-content;
-  margin: 100px auto 0;
+  margin: 100px auto 100px;
+  
 }
 .popup__rejected:hover {
   transform: scale(1.02);
